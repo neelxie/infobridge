@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-body font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-heading;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-heading;
+  }
+
+  :focus-visible {
+    outline: 2px solid #0E7C74;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.14em] text-accent-dark;
+  }
+
+  .section-pad {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .link-underline {
+    @apply relative inline-flex items-center gap-1.5 text-accent-dark transition-colors hover:text-accent;
+  }
+
+  .card-surface {
+    @apply rounded-lg border border-border bg-surface shadow-card;
+  }
+
+  .node-divider {
+    background-image: radial-gradient(circle, #0E7C74 1.5px, transparent 1.5px);
+    background-size: 14px 1px;
+    background-repeat: repeat-x;
+    background-position: left center;
+    height: 1px;
+  }
+}
