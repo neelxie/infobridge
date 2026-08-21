@@ -2,9 +2,7 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: "class",
-  content: [
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     container: {
       center: true,
@@ -29,7 +27,7 @@ const config: Config = {
         },
         background: "#F7F8F7",
         surface: "#FFFFFF",
-        heading: "#0B1B2B",
+        heading: "#e9eef3",
         body: "#33414F",
         muted: "#64748B",
         border: "#E2E6EA",
