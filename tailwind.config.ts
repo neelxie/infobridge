@@ -27,7 +27,7 @@ const config: Config = {
         },
         background: "#F7F8F7",
         surface: "#FFFFFF",
-        heading: "#e9eef3",
+        heading: "#568259",
         body: "#33414F",
         muted: "#64748B",
         border: "#E2E6EA",
